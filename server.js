@@ -44,8 +44,7 @@ const magic8ball = [
 app.get("/magic/:question", (req, res) => {
   // console.log(encodeURI("Will I Be A Millionaire"));
   const question = decodeURI(req.params.question);
-  const reandomResponse =
-    magic8ball[Math.floor(Math.random() * magic8ball.length)];
+  const reandomResponse = magic8ball[Math.floor(Math.random() * magic8ball.length)];
 
   res.send(`
     <h1>Your Question: ${question} </h1>
